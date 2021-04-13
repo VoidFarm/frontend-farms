@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Flex, Skeleton } from '@mozartfinance/uikit'
+import { Box, Flex, Skeleton } from 'voidfarm-toolkit'
 
 const InactiveSkeleton = () => (
   <>

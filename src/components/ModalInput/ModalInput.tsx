@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Button, Input, InputProps, Flex, Link } from '@mozartfinance/uikit'
+import { Text, Button, Input, InputProps, Flex, Link } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 import BigNumber from "bignumber.js";
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Heading } from '@mozartfinance/uikit'
+import { Heading } from 'voidfarm-toolkit'
 
 const Title = styled(Heading).attrs({ size: 'lg' })`
   color: ${({ theme }) => theme.colors.secondary};

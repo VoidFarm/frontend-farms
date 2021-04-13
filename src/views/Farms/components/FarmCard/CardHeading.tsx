@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tag, Flex, Heading, Image } from '@mozartfinance/uikit'
+import { Tag, Flex, Heading, Image } from 'voidfarm-toolkit'
 import { CommunityTag, CoreTag, NoFeeTag } from 'components/Tags'
 
 export interface ExpandableSectionProps {

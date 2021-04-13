@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardBody, Heading, Skeleton, Text } from '@mozartfinance/uikit'
+import { Card, CardBody, Heading, Skeleton, Text } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 import { useTotalValue } from '../../../state/hooks'
 import CardValue from "./CardValue";

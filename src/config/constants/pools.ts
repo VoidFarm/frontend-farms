@@ -16,34 +16,34 @@ const pools: PoolConfig[] = [
     sortOrder: 1,
     isFinished: false,
   },
-  {
-    sousId: 1,
-    stakingToken: tokens.wbnb,
-    earningToken: tokens.piano,
-    contractAddress: {
-      56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
-      97: ''
-    },
-    poolCategory: PoolCategory.BINANCE,
-    harvest: true,
-    tokenPerBlock: '0.01',
-    sortOrder: 1,
-    isFinished: false,
-  },
-  {
-    sousId: 2,
-    stakingToken: tokens.busd,
-    earningToken: tokens.piano,
-    contractAddress: {
-      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
-      97: ''
-    },
-    poolCategory: PoolCategory.BINANCE,
-    harvest: true,
-    tokenPerBlock: '0.01',
-    sortOrder: 1,
-    isFinished: false,
-  },
+  // {
+  //   sousId: 1,
+  //   stakingToken: tokens.wbnb,
+  //   earningToken: tokens.wbnb,
+  //   contractAddress: {
+  //     56: '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c',
+  //     97: ''
+  //   },
+  //   poolCategory: PoolCategory.BINANCE,
+  //   harvest: true,
+  //   tokenPerBlock: '0.01',
+  //   sortOrder: 1,
+  //   isFinished: false,
+  // },
+  // {
+  //   sousId: 2,
+  //   stakingToken: tokens.busd,
+  //   earningToken: tokens.busd,
+  //   contractAddress: {
+  //     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+  //     97: ''
+  //   },
+  //   poolCategory: PoolCategory.BINANCE,
+  //   harvest: true,
+  //   tokenPerBlock: '0.01',
+  //   sortOrder: 1,
+  //   isFinished: false,
+  // },
 ]
 
 export default pools

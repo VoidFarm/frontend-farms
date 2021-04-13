@@ -2,7 +2,7 @@ import { useEffect, useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import { kebabCase } from 'lodash'
 import { useWeb3React } from '@web3-react/core'
-import { Toast, toastTypes } from '@mozartfinance/uikit'
+import { Toast, toastTypes } from 'voidfarm-toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 import { Team } from 'config/constants/types'
 import { getWeb3NoAccount } from 'utils/web3'
@@ -199,7 +199,12 @@ export const useGetApiPrice = (token: string) => {
 
   return prices[token.toLowerCase()]
 }
-
+export const usePriceBnbBusd = (): BigNumber => {
+  const ZERO = new BigNumber(0)
+  const pid = 5 // BUSD-BNB LP
+  const farm = useFarmFromPid(pid)
+  return farm.tokenPriceVsQuote ? new BigNumber(farm.tokenPriceVsQuote) : ZERO
+}
 export const usePriceCakeBusd = (): BigNumber => {
   const ZERO = new BigNumber(0)
   const cakeBnbFarm = useFarmFromPid(1)
@@ -226,24 +231,44 @@ export const usePoolsEx = (): Pool[] => {
 }
 
 export const useTotalValue = (): BigNumber => {
-  const prices = useGetApiPrices()
-  const farms = useFarms()
-  const pools = usePoolsEx()
-
-  let value = new BigNumber(0)
-  if(prices) {
-    for (let i = 0; i < farms.length; i++) {
-      const farm = farms[i]
-      const quoteTokenPriceUsd = prices[farm.quoteToken.symbol.toLowerCase()]
-      const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
-      value = value.plus(totalLiquidity);
-    }
-    for (let i = 0; i < pools.length; i++) {
-      const pool = pools[i]
-      const quoteTokenPriceUsd = prices[pool.stakingToken.symbol.toLowerCase()]
-      const totalLiquidity = new BigNumber(getBalanceNumber(pool.totalStaked, pool.stakingToken.decimals)).times(quoteTokenPriceUsd)
-      value = value.plus(totalLiquidity);
+  
+  const farms = useFarms();
+  const bnbPrice = usePriceBnbBusd();
+  const cakePrice = usePriceCakeBusd();
+  let value = new BigNumber(0);
+  for (let i = 0; i < farms.length; i++) {
+    const farm = farms[i]
+    if (farm.lpTotalInQuoteToken) {
+      let val;
+      if (farm.quoteToken.symbol === 'BNB') {
+        val = (bnbPrice.times(farm.lpTotalInQuoteToken));
+      }else if (farm.quoteToken.symbol === 'CAKE') {
+        val = (cakePrice.times(farm.lpTotalInQuoteToken));
+      }else{
+        val = (farm.lpTotalInQuoteToken);
+      }
+      value = value.plus(val);
     }
   }
   return value;
+  // const prices = useGetApiPrices()
+  // const farms = useFarms()
+  // const pools = usePoolsEx()
+
+  // let value = new BigNumber(0)
+  // if(prices) {
+  //   for (let i = 0; i < farms.length; i++) {
+  //     const farm = farms[i]
+  //     const quoteTokenPriceUsd = prices[farm.quoteToken.symbol.toLowerCase()]
+  //     const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
+  //     value = value.plus(totalLiquidity);
+  //   }
+  //   for (let i = 0; i < pools.length; i++) {
+  //     const pool = pools[i]
+  //     const quoteTokenPriceUsd = prices[pool.stakingToken.symbol.toLowerCase()]
+  //     const totalLiquidity = new BigNumber(getBalanceNumber(pool.totalStaked, pool.stakingToken.decimals)).times(quoteTokenPriceUsd)
+  //     value = value.plus(totalLiquidity);
+  //   }
+  // }
+  // return value;
 }

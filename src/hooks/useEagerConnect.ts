@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { connectorLocalStorageKey, ConnectorNames } from '@mozartfinance/uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'voidfarm-toolkit'
 import useAuth from 'hooks/useAuth'
 
 const useEagerConnect = () => {

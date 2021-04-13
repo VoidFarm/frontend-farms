@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, Text } from '@mozartfinance/uikit'
+import { ChevronDownIcon, Text } from 'voidfarm-toolkit'
 
 export interface DetailsButtonProps {
   onClick?: () => void

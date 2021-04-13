@@ -7,7 +7,7 @@ import {
   ChevronDownIcon,
   Box,
   Flex,
-} from '@mozartfinance/uikit'
+} from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 interface ApproveConfirmButtonsProps {

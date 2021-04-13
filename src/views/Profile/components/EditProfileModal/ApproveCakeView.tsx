@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from '@mozartfinance/uikit'
+import { AutoRenewIcon, Button, Flex, InjectedModalProps, Text } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 import { useCake } from 'hooks/useContract'
 import { useProfile, useToast } from 'state/hooks'

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, ChevronUpIcon, Text } from '@mozartfinance/uikit'
+import { ChevronDownIcon, ChevronUpIcon, Text } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 export interface ExpandableSectionButtonProps {

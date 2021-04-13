@@ -10,7 +10,7 @@ const tokens = {
       97: '',
     },
     decimals: 18,
-    projectLink: 'https://mozartfinance.io/',
+    projectLink: 'https://void.farm/',
   },
   piano: {
     symbol: 'VOID',
@@ -20,15 +20,6 @@ const tokens = {
     },
     decimals: 18,
     projectLink: 'nope',
-  },
-  foam: {
-    symbol: 'FOAM',
-    address: {
-      56: '0x5380ce816082d9a01c914cab73eb062f290131d6',
-      97: '',
-    },
-    decimals: 18,
-    projectLink: 'https://mozartfinance.io/',
   },
   busd: {
     symbol: 'BUSD',

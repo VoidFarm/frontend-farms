@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import useI18n from 'hooks/useI18n'
-import { Heading, Text } from '@mozartfinance/uikit'
+import { Heading, Text } from 'voidfarm-toolkit'
 
 export interface PrizeGridProps {
   lotteryPrizeAmount?: number

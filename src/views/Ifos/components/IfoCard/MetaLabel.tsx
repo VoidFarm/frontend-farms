@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, BoxProps, Text } from '@mozartfinance/uikit'
+import { Box, BoxProps, Text } from 'voidfarm-toolkit'
 
 type MetaLabel = BoxProps
 

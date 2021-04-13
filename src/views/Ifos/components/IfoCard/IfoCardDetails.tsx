@@ -9,7 +9,7 @@ import {
   Button,
   ChevronDownIcon,
   ChevronUpIcon,
-} from '@mozartfinance/uikit'
+} from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 import { PublicIfoState } from 'hooks/useGetPublicIfoData'
 import { Ifo } from 'config/constants/types'

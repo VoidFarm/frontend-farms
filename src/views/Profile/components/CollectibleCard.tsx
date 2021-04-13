@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text } from '@mozartfinance/uikit'
+import { Text } from 'voidfarm-toolkit'
 import { Nft } from 'config/constants/types'
 
 interface CollectibleCardProps {

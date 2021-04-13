@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js/bignumber'
-import { Card, CardBody, Heading, Text } from '@mozartfinance/uikit'
+import { Card, CardBody, Heading, Text } from 'voidfarm-toolkit'
 import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'

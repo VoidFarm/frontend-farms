@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from '@mozartfinance/uikit'
+import { Tag, VerifiedIcon, CommunityIcon, BinanceIcon } from 'voidfarm-toolkit'
 
 const CoreTag = (props) => (
   <Tag variant="secondary" outline startIcon={<VerifiedIcon color="secondary" />} {...props}>

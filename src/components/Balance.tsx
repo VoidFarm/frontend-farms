@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import CountUp from 'react-countup'
-import { Text } from '@mozartfinance/uikit'
+import { Text } from 'voidfarm-toolkit'
 
 interface TextProps {
   isDisabled?: boolean

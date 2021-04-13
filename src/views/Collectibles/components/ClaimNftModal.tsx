@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
 import { useBunnySpecialContract } from 'hooks/useContract'
 import { useToast } from 'state/hooks'
-import { Button, InjectedModalProps, Modal, Text, Flex } from '@mozartfinance/uikit'
+import { Button, InjectedModalProps, Modal, Text, Flex } from 'voidfarm-toolkit'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 

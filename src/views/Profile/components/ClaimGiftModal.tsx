@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import { Modal, Text, InjectedModalProps, Button, AutoRenewIcon } from '@mozartfinance/uikit'
+import { Modal, Text, InjectedModalProps, Button, AutoRenewIcon } from 'voidfarm-toolkit'
 import { useWeb3React } from '@web3-react/core'
 import { useToast } from 'state/hooks'
 import { useClaimRefundContract } from 'hooks/useContract'

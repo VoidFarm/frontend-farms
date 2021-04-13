@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useRouteMatch, Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem } from '@mozartfinance/uikit'
+import { ButtonMenu, ButtonMenuItem } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 const FarmTabButtons = () => {

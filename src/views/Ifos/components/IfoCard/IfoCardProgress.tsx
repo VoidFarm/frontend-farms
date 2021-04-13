@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Progress } from '@mozartfinance/uikit'
+import { Box, Progress } from 'voidfarm-toolkit'
 
 interface IfoCardProgressProps {
   progress: number

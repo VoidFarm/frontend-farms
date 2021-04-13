@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Card, CardBody } from '@mozartfinance/uikit'
+import { Card, CardBody } from 'voidfarm-toolkit'
 import getLotteryRoundData from 'utils/getLotteryRoundData'
 import useI18n from 'hooks/useI18n'
 import useGetRecentLotteryRoundData from 'hooks/useGetRecentLotteryRoundData'

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useParticleBurst } from '@mozartfinance/uikit'
+import { useParticleBurst } from 'voidfarm-toolkit'
 import { useLocation } from 'react-router-dom'
 
 const disableWhenNotChristmas = () => {

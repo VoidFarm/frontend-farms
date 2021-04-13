@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useCountUp } from 'react-countup'
-import { Text } from '@mozartfinance/uikit'
+import { Text } from 'voidfarm-toolkit'
 
 export interface CardValueProps {
   value: number

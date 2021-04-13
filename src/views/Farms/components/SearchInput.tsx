@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { Input } from '@mozartfinance/uikit'
+import { Input } from 'voidfarm-toolkit'
 import styled from 'styled-components'
 
 const StyledInput = styled(Input)`

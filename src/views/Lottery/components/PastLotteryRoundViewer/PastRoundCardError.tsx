@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from '@mozartfinance/uikit'
+import { Text } from 'voidfarm-toolkit'
 
 interface PastRoundCardErrorProps {
   error: {

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ListViewIcon, CardViewIcon, IconButton } from '@mozartfinance/uikit'
+import { ListViewIcon, CardViewIcon, IconButton } from 'voidfarm-toolkit'
 import { ViewMode } from '../types'
 
 interface ToogleViewProps {

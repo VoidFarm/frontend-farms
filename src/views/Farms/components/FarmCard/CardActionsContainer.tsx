@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { provider as ProviderType } from 'web3-core'
 import { getAddress } from 'utils/addressHelpers'
 import { getBep20Contract } from 'utils/contractHelpers'
-import { Button, Flex, Text } from '@mozartfinance/uikit'
+import { Button, Flex, Text } from 'voidfarm-toolkit'
 import { Farm } from 'state/types'
 import { useFarmFromSymbol, useFarmUser } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
@@ -31,16 +31,23 @@ interface FarmCardActionsProps {
 const CardActions: React.FC<FarmCardActionsProps> = ({ farm, account, addLiquidityUrl, depositFeeBP = 0 }) => {
   const TranslateString = useI18n()
   const [requestedApproval, setRequestedApproval] = useState(false)
-  const { pid, lpAddresses  } = useFarmFromSymbol(farm.lpSymbol)
+  const _farmFromSymbol = useFarmFromSymbol(farm.lpSymbol)
+  let pid;
+  let lpAddresses;
+  if (farm.isTokenOnly){
+    pid = _farmFromSymbol.pid
+    lpAddresses = _farmFromSymbol.token.address
+  }
+  else{
+    pid = _farmFromSymbol.pid
+    lpAddresses = _farmFromSymbol.lpAddresses
+  }
+  
   const { allowance, tokenBalance, stakedBalance, earnings} = useFarmUser(pid)
   const lpAddress = getAddress(lpAddresses)
   const lpName = farm.lpSymbol.toUpperCase()
   const isApproved = account && allowance && allowance.isGreaterThan(0)
   const web3 = useWeb3()
-
-  // this
-  console.log(farm.lpSymbol, lpAddress)
-
 
   const lpContract = getBep20Contract(lpAddress, web3)
 

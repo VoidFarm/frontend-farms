@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Flex, Heading } from '@mozartfinance/uikit'
+import { Flex, Heading } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 import { useAchievements } from 'state/hooks'
 import AchievementCard from './AchievementCard'

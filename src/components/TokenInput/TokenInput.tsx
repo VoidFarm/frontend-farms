@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Flex, Text, Input, InputProps } from '@mozartfinance/uikit'
+import { Box, Button, Flex, Text, Input, InputProps } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 interface TokenInputProps extends InputProps {

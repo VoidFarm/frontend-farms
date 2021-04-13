@@ -1,5 +1,5 @@
 import React from 'react'
-import { NoProfileAvatarIcon } from '@mozartfinance/uikit'
+import { NoProfileAvatarIcon } from 'voidfarm-toolkit'
 import { Profile } from 'state/types'
 import styled from 'styled-components'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, Radio } from '@mozartfinance/uikit'
+import { Card, Radio } from 'voidfarm-toolkit'
 
 interface SelectionCardProps {
   name: string

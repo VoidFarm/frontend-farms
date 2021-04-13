@@ -3,7 +3,7 @@ import { Route, useRouteMatch, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
-import { Image, Heading, RowType, Toggle, Text } from '@mozartfinance/uikit'
+import { Image, Heading, RowType, Toggle, Text } from 'voidfarm-toolkit'
 import styled from 'styled-components'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
@@ -39,6 +39,13 @@ const ControlContainer = styled.div`
     flex-wrap: wrap;
     padding: 16px 32px;
   }
+`
+
+const StyledPage = styled(Page)`
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:contain;
+  background-image: url("/images/midVoid.png");
 `
 
 const ToggleWrapper = styled.div`
@@ -93,7 +100,8 @@ const ViewControls = styled.div`
 const StyledImage = styled(Image)`
   margin-left: auto;
   margin-right: auto;
-  margin-top: 58px;
+  margin-top: 75px;
+  margin-bottom: -30px;
 `
 
 const Header = styled.div`
@@ -145,8 +153,6 @@ const Farms: React.FC = () => {
     activeFarms = farmsLP.filter((farm) => !farm.isTokenOnly && farm.multiplier !== '0X')
     inactiveFarms = farmsLP.filter((farm) => !farm.isTokenOnly && farm.multiplier === '0X')
   }
-  // const activeFarms = farmsLP.filter((farm) => farm.multiplier !== '0X')
-  // const inactiveFarms = farmsLP.filter((farm) => farm.multiplier === '0X')
 
   const stackedOnlyFarms = activeFarms.filter(
     (farm) => farm.userData && new BigNumber(farm.userData.stakedBalance).isGreaterThan(0),
@@ -174,7 +180,7 @@ const Farms: React.FC = () => {
         return farms
     }
   }
-
+  
   const farmsList = useCallback(
     (farmsToDisplay: Farm[]): FarmWithStakedValue[] => {
       let farmsToDisplayWithAPY: FarmWithStakedValue[] = farmsToDisplay.map((farm) => {
@@ -184,9 +190,8 @@ const Farms: React.FC = () => {
 
         const quoteTokenPriceUsd = prices[farm.quoteToken.symbol.toLowerCase()]
         const totalLiquidity = new BigNumber(farm.lpTotalInQuoteToken).times(quoteTokenPriceUsd)
+        
         const apy = isActive ? getFarmApy(farm.poolWeight, cakePrice, totalLiquidity,farm.voidPerBlock) : 0
-
-        // console.log(farm.lpSymbol,farm)
 
         return { ...farm, apy, liquidity: totalLiquidity }
       })
@@ -315,7 +320,7 @@ const Farms: React.FC = () => {
         {isPool ? TranslateString(999, 'Stake your tokens to earn VOID.') : TranslateString(999, 'Stake Liquidity Pool (LP) tokens to earn VOID.')}
         </Heading>
       </Header>
-      <Page>
+      <StyledPage>
         <ControlContainer>
           <ViewControls>
             <ToggleView viewMode={viewMode} onToggle={(mode: ViewMode) => setViewMode(mode)} />
@@ -361,8 +366,8 @@ const Farms: React.FC = () => {
           </FilterContainer>
         </ControlContainer>
         {renderContent()}
-        <StyledImage src="/images/mozart-flying.png" alt="Mozart illustration" width={300} height={300} />
-      </Page>
+        {/* <StyledImage src="/images/midVoid.png" alt="mid void" width={1000} height={1000} /> */}
+      </StyledPage>
     </>
   )
 }

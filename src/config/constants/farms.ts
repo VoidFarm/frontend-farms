@@ -27,7 +27,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'VOID', // PIANO-BUSD LP
     isTokenOnly:true,
     lpAddresses: {
-      56: '0x7E824132742F57CEe7323af597C8DD15762113EE',
+      56: '0x7E824132742F57CEe7323af597C8DD15762113EE', // era 0x7E824132742F57CEe7323af597C8DD15762113EE <<<<<< >>>>>> este te deja stakear 0x7d0F5cF456E8E76e4f8F1A6F943583674554315c
       97: '',
     },
     token: tokens.piano,
@@ -38,7 +38,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'wBNB',
     isTokenOnly:true,
     lpAddresses: {
-      56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',
+      56: '0x1b96b92314c44b159149f7e0303511fb2fc4774f',// era 0x1b96b92314c44b159149f7e0303511fb2fc4774f <<<<<< >>>>>> este te deja stakear 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c
       97: '',
     },
     token: tokens.wbnb,
@@ -49,7 +49,7 @@ const farms: FarmConfig[] = [
     lpSymbol: 'BUSD',
     isTokenOnly:true,
     lpAddresses: {
-      56: '0x7E824132742F57CEe7323af597C8DD15762113EE',
+      56: '0x7E824132742F57CEe7323af597C8DD15762113EE', // era 0x7E824132742F57CEe7323af597C8DD15762113EE <<<<<< >>>>>> este te deja stakear 0xe9e7cea3dedca5984780bafc599bd69add087d56
       97: ''
     },
     token: tokens.busd,

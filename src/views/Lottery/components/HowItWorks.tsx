@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Text, Heading, Link, Image } from '@mozartfinance/uikit'
+import { Text, Heading, Link, Image } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 const LayoutWrapper = styled.div`

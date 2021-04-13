@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components'
-import { CardHeader as UIKitCardHeader } from '@mozartfinance/uikit'
+import { CardHeader as UIKitCardHeader } from 'voidfarm-toolkit'
 
 const getBackground = (theme: DefaultTheme) => {
   if (theme.isDark) {

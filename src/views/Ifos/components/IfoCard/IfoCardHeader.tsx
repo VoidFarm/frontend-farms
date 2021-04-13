@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, Flex } from '@mozartfinance/uikit'
+import { Heading, Text, Flex } from 'voidfarm-toolkit'
 
 interface IfoCardHeaderProps {
   ifoId: string

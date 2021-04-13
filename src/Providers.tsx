@@ -1,5 +1,5 @@
 import React from 'react'
-import { ModalProvider } from '@mozartfinance/uikit'
+import { ModalProvider } from 'voidfarm-toolkit'
 import { Web3ReactProvider } from '@web3-react/core'
 import { Provider } from 'react-redux'
 import { getLibrary } from 'utils/web3React'

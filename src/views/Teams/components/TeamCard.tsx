@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text } from '@mozartfinance/uikit'
+import { Card, CardHeader, CardBody, CommunityIcon, Heading, PrizeIcon, Text } from 'voidfarm-toolkit'
 import { Team } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import ComingSoon from 'views/Profile/components/ComingSoon'

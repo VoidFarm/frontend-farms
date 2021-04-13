@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Text } from '@mozartfinance/uikit'
+import { Heading, Text } from 'voidfarm-toolkit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import HeaderWrapper from 'views/Profile/components/HeaderWrapper'

@@ -1,6 +1,6 @@
 import React from 'react'
 import BigNumber from 'bignumber.js'
-import { Text } from '@mozartfinance/uikit'
+import { Text } from 'voidfarm-toolkit'
 import { UserInfo } from 'hooks/useGetWalletIfoData'
 import useI18n from 'hooks/useI18n'
 

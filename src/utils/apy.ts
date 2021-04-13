@@ -19,9 +19,6 @@ export const getPoolApy = (
   const totalStakingTokenInPool = new BigNumber(stakingTokenPrice).times(totalStaked).isEqualTo(0)? 1 : new BigNumber(stakingTokenPrice).times(totalStaked);
   const apy = totalRewardPricePerYear.div(totalStakingTokenInPool).times(100)
 
-  console.log(stakingTokenPrice)
-  console.log(totalStaked)
-
   return apy.isNaN() || !apy.isFinite() ? null : apy.toNumber()
 }
 

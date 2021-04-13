@@ -58,7 +58,7 @@ const getProfile = async (address: string): Promise<GetProfileResponse> => {
           username,
           avatar: `https://pancakeswap.finance/images/nfts/${nft.images.sm}`,
         },
-        { domain: 'mozartfinance.io', secure: true, expires: 30 },
+        { domain: 'void.farm', secure: true, expires: 30 },
       )
     }
 

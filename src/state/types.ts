@@ -1,4 +1,4 @@
-import { Toast } from '@mozartfinance/uikit'
+import { Toast } from 'voidfarm-toolkit'
 import BigNumber from 'bignumber.js'
 import { CampaignType, FarmConfig, Nft, PoolConfig, Team } from 'config/constants/types'
 

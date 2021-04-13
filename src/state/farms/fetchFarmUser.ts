@@ -9,7 +9,7 @@ export const fetchFarmUserAllowances = async (account: string) => {
   const masterChefAdress = getMasterChefAddress()
 
   const calls = farmsConfig.map((farm) => {
-    const lpContractAddress = getAddress(farm.lpAddresses)
+    const lpContractAddress = farm.isTokenOnly? getAddress(farm.token.address) : getAddress(farm.lpAddresses)
     return { address: lpContractAddress, name: 'allowance', params: [account, masterChefAdress] }
   })
 
@@ -22,7 +22,7 @@ export const fetchFarmUserAllowances = async (account: string) => {
 
 export const fetchFarmUserTokenBalances = async (account: string) => {
   const calls = farmsConfig.map((farm) => {
-    const lpContractAddress = getAddress(farm.lpAddresses)
+    const lpContractAddress = farm.isTokenOnly? getAddress(farm.token.address) : getAddress(farm.lpAddresses)
     return {
       address: lpContractAddress,
       name: 'balanceOf',

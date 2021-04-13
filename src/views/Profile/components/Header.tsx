@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Flex, Heading, useModal, Won } from '@mozartfinance/uikit'
+import { Button, Flex, Heading, useModal, Won } from 'voidfarm-toolkit'
 import { useProfile } from 'state/hooks'
 import useI18n from 'hooks/useI18n'
 import ClaimNftAndCakeModal, { useCanClaim } from './ClaimGiftModal'

@@ -1,4 +1,4 @@
-import { MenuEntry } from '@mozartfinance/uikit'
+import { MenuEntry } from 'voidfarm-toolkit'
 
 const config: MenuEntry[] = [
   {
@@ -12,21 +12,21 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Exchange',
-        href: 'https://exchange.mozartfinance.io',
+        href: 'https://exchange.pancakeswap.finance/#/swap',
       },
       {
         label: 'Liquidity',
-        href: 'https://exchange.mozartfinance.io/#/pool',
+        href: 'https://exchange.pancakeswap.finance/#/pool',
       },
     ],
   },
   {
-    label: 'Farms',
+    label: 'Farms (coming soon..)',
     icon: 'FarmIcon',
     href: '/farms',
   },
   {
-    label: 'Pools',
+    label: 'Pools (coming soon..)',
     icon: 'PoolIcon',
     href: '/pools',
   },

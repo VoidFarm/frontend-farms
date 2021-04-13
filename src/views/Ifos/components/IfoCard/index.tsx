@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useWeb3React } from '@web3-react/core'
-import { Card, CardBody, CardRibbon } from '@mozartfinance/uikit'
+import { Card, CardBody, CardRibbon } from 'voidfarm-toolkit'
 import { Ifo, IfoStatus } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
 import useGetPublicIfoData from 'hooks/useGetPublicIfoData'

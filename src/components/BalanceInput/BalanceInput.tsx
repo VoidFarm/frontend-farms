@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button, Box, BoxProps, Flex, Input as UIKitInput, Text } from '@mozartfinance/uikit'
+import { Button, Box, BoxProps, Flex, Input as UIKitInput, Text } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 export interface BalanceInputProps extends BoxProps {

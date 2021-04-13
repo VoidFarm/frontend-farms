@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChevronDownIcon, useMatchBreakpoints } from '@mozartfinance/uikit'
+import { ChevronDownIcon, useMatchBreakpoints } from 'voidfarm-toolkit'
 import useI18n from 'hooks/useI18n'
 
 interface DetailsProps {
